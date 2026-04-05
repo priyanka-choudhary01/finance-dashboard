@@ -17,7 +17,7 @@ export default function Navbar({role,setRole}) {
 
       <div className="nav-right">
 
-        {/* 🌙 Dark Mode */}
+     {  /* checkbox for dark mode */}
         <div className="dark-mode-container">
           <span>Dark Mode</span>
 
@@ -29,8 +29,6 @@ export default function Navbar({role,setRole}) {
             />
             <span className="slider"></span>
           </label>
-
-          {/* Icon */}
           <i className={`fa-solid ${darkMode ? "fa-moon" : "fa-sun"}`}></i>
         </div>
 

@@ -2,12 +2,12 @@ import "./SummaryCards.css";
 
 export default function SummaryCards({ transactions = [] }) {
 
- 
+//  {calculating income}
   const income = transactions
     .filter((t) => t.type === "income")
     .reduce((sum, t) => sum + Number(t.amount), 0);
 
-  
+  //calculating expenses
   const expenses = transactions
     .filter((t) => t.type === "expense")
     .reduce((sum, t) => sum + Number(t.amount), 0);
