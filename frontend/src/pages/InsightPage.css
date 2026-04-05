@@ -1,0 +1,52 @@
+.insights {
+  padding: 20px;
+}
+
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.insight-actions button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.top-card {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.month-compare {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.month-card {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.category-list {
+  margin-top: 15px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid;
+}
+
+.viewer-note {
+  margin-top: 10px;
+  color: orange;
+}

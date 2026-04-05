@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6fb;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;   
+  top: 0;            
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dark Mode */
+.dark-mode-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* Toggle */
+.switch {
+  position: relative;
+  width: 42px;
+  height: 22px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: #d1d5db;
+  border-radius: 20px;
+  inset: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 3px;
+  left: 4px;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #4f46e5;
+}
+
+input:checked + .slider::before {
+  transform: translateX(18px);
+}
+
+/* Dropdown */
+.role-dropdown {
+  position: relative;
+}
+
+.role-btn {
+  background: #4f46e5;
+  color: white;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.role-menu {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  display: none;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.role-menu div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.role-menu div:hover {
+  background: #f3f4f6;
+}
+
+.role-btn i,
+.role-menu i {
+  margin-right: 6px;
+}
+
+.dark-mode-container i {
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.role-dropdown.active .role-menu {
+  display: block;
+}
+
+.dark {
+  background: #1f2937;
+  color: white;
+}
+
+.dark .navbar {
+  background: #2c2f3f;
+}
+
+.dark .role-menu {
+  background: #374151;
+}
+
+.dark .role-menu div:hover {
+  background: #4b5563;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+    margin: 0;
+  }
+
+  .nav-left h2 {
+    font-size: 18px;
+  }
+
+  .nav-right {
+    gap: 12px;
+  }
+
+  .role-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-left h2 {
+    font-size: 16px;
+  }
+  .role-dropdown {
+    width: 100%;
+  }
+
+  .role-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .role-menu {
+    width: 100%;
+    right: auto;
+  }
+}

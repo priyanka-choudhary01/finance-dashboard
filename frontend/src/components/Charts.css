@@ -1,0 +1,77 @@
+.charts-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+
+.chart-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+  /* ADDED: prevent overflow issues */
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chart-card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.line-chart {
+  stroke: #4f46e5;
+  stroke-width: 3;
+}
+
+.pie-slice.slice-0 {
+  fill: #4f46e5;
+}
+
+.pie-slice.slice-1 {
+  fill: #22c55e;
+}
+
+.pie-slice.slice-2 {
+  fill: #3b82f6;
+}
+
+.pie-slice.slice-3 {
+  fill: #f59e0b;
+}
+
+.pie-slice.slice-4 {
+  fill: #ef4444;
+}
+
+.pie-slice.slice-5 {
+  fill: #14b8a6;
+}
+
+/* IMPROVED MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    margin: 10px; /* better spacing */
+    gap: 15px;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+}
+.chart-card {
+  width: 100%;
+  overflow: hidden; 
+}
+.chart-card svg {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.dark .chart-card {
+  background: #2c2f3f;
+  color: white;
+}

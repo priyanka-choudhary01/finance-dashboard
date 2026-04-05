@@ -1,0 +1,316 @@
+
+.transactions {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.filter-bar span {
+  font-weight: 600;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.add-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.table-card {
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.export-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.show-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal-content {
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.modal-content input,
+.modal-content select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+.dark .transactions {
+  color: white;
+}
+
+.dark .table-card {
+  border: 1px solid;
+}
+
+.dark th,
+.dark td {
+  border-color: rgba(255,255,255,0.2);
+}
+.viewer-warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.disabled-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.export-btn:hover {
+  opacity: 0.8;
+}
+
+
+.modern-modal {
+  width: 380px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.form-group input,
+.form-group select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 4px rgba(74,144,226,0.3);
+}
+
+.modern-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.primary-btn {
+  flex: 1;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #357abd;
+}
+
+.secondary-btn {
+  flex: 1;
+  background: #eee;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #ddd;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dark .modern-modal {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark .form-group input,
+.dark .form-group select {
+  background: #2a2a2a;
+  border-color: #444;
+  color: white;
+}
+
+.dark .secondary-btn {
+  background: #333;
+  color: white;
+}
+
+.edit-modal {
+  border-left: 4px solid #ffa500;
+}
+
+.modern-modal {
+  border-left: 4px solid #4a90e2;
+}
+
+
+.update-btn {
+  background: #ffa500;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background: #e69500;
+}
+
+
+.edit-info {
+  font-size: 12px;
+  color: gray;
+}

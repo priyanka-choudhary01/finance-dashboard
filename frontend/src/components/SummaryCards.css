@@ -1,0 +1,58 @@
+.summary-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px;
+}
+
+.card {
+  padding: 18px;
+  border-radius: 12px;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.card h2 {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.balance {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.income {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
+.expenses {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+}
+
+@media (max-width: 768px) {
+  .summary-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.dark .card {
+  color: white;
+}
+
+.dark .balance {
+  background: #1e3a8a;
+}
+
+.dark .income {
+  background: #92400e;
+}
+
+.dark .expenses {
+  background: #7f1d1d;
+}
