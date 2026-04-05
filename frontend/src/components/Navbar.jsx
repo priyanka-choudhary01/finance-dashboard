@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./navbar.css";
+import "./Navbar.css";
 
 export default function Navbar({role,setRole}) {
   const [darkMode, setDarkMode] = useState(false);
